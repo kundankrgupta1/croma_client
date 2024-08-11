@@ -12,7 +12,7 @@
 
 
 <h1>🤖 Introduction</h1>
-<p>Welcome to our eCommerce project built with React JS, JavaScript, JSX, HTML, CSS, Tailwind CSS, and Chakra UI. This project aims to provide a seamless shopping experience for users, with a focus on a responsive design suitable for mobile, tablet, and desktop devices</p>
+<pWelcome to our Croma eCommerce clone project, built using React JS, JavaScript, JSX, HTML, CSS, Tailwind CSS, and Chakra UI. This project is designed to replicate the seamless shopping experience of Croma, with a strong emphasis on responsive design that ensures optimal performance across mobile, tablet, and desktop devices.</p>
 
 <h1>⚙️ Showcase of Used Tech Stack</h1>
 <h3>Frontend:</h3>
