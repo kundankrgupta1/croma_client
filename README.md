@@ -1,5 +1,6 @@
 <h1 align="center">Croma eCommerce Clone App</h1>
-Creating a Responsive eCommerce Website using React, JavaScript, JSX, Tailwind CSS, and Chakra-ui
+<h3>Creating a Responsive eCommerce Website</h3>
+<p>This project is a clone of the Croma eCommerce website, built to provide users with a seamless shopping experience, focusing on responsive design suitable for mobile, tablet, and desktop devices.</p>
 
 
 ![Tech Stack](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
@@ -14,6 +15,7 @@ Creating a Responsive eCommerce Website using React, JavaScript, JSX, Tailwind C
 <p>Welcome to our eCommerce project built with React JS, JavaScript, JSX, HTML, CSS, Tailwind CSS, and Chakra UI. This project aims to provide a seamless shopping experience for users, with a focus on a responsive design suitable for mobile, tablet, and desktop devices</p>
 
 <h1>⚙️ Showcase of Used Tech Stack</h1>
+<h4>Frontend:</h4>
 <ul>
   <li>React JS: A JavaScript library for building user interfaces.</li>
   <li>JavaScript: A programming language used for dynamic website functionalities.</li>
@@ -22,7 +24,19 @@ Creating a Responsive eCommerce Website using React, JavaScript, JSX, Tailwind C
   <li>CSS: A style sheet language used for describing the presentation of a document written in HTML.</li>
   <li>Tailwind CSS: A utility-first CSS framework for building custom designs without having to leave your HTML.</li>
   <li>Chakra UI: A simple, modular, and accessible component library that gives you the building blocks you need to build your React applications.</li>
+  <li>Restful API: All the data for the frontend is fetched through a RESTful API.</li>
 </ul>
+
+<h4>backend:</h4>
+<ul>
+  <li>MongoDB: A NoSQL database used to store application data.</li>
+  <li>Mongoose: An elegant MongoDB object modeling tool for Node.js.</li>
+  <li>Express: A web application framework for Node.js, used to build the backend.</li>
+  <li>Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine, used to build scalable network applications.</li>
+  <li>JWT: Used for generating and verifying JSON Web Tokens for secure user authentication.</li>
+  <li>Nodemailer: A module for Node.js applications to send emails, used here to generate OTPs for user authentication.</li>
+</ul>
+
 
 <h1>🔋 Features</h1>
 <p>👉 Responsive Design: The project is optimized for various screen sizes, ensuring a consistent experience across mobile, tablet, and desktop devices.</p>
