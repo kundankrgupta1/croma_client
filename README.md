@@ -37,6 +37,12 @@
   <li>Nodemailer: A module for Node.js applications to send emails, used here to generate OTPs for user authentication.</li>
 </ul>
 
+<h3>API:</h3>
+<ul>
+  <li>RESTful API: All data, including product details, user information, and cart items, is fetched and managed via RESTful APIs, allowing for a seamless interaction between the frontend and backend.
+</li>
+</ul>
+
 
 <h1>🔋 Features</h1>
 <p>👉 User Authentication: Users can register and log in with OTP-based authentication.</p>
