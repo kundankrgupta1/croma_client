@@ -1,4 +1,4 @@
-<h1 align="center"> eCommerce App</h1>
+<h1 align="center">Croma eCommerce Clone App</h1>
 Creating a Responsive eCommerce Website using React, JavaScript, JSX, Tailwind CSS, and Chakra-ui
 
 
