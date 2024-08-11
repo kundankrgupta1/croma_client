@@ -15,7 +15,7 @@
 <p>Welcome to our eCommerce project built with React JS, JavaScript, JSX, HTML, CSS, Tailwind CSS, and Chakra UI. This project aims to provide a seamless shopping experience for users, with a focus on a responsive design suitable for mobile, tablet, and desktop devices</p>
 
 <h1>⚙️ Showcase of Used Tech Stack</h1>
-<h4>Frontend:</h4>
+<h3>Frontend:</h3>
 <ul>
   <li>React JS: A JavaScript library for building user interfaces.</li>
   <li>JavaScript: A programming language used for dynamic website functionalities.</li>
@@ -27,7 +27,7 @@
   <li>Restful API: All the data for the frontend is fetched through a RESTful API.</li>
 </ul>
 
-<h4>backend:</h4>
+<h3>Backend:</h3>
 <ul>
   <li>MongoDB: A NoSQL database used to store application data.</li>
   <li>Mongoose: An elegant MongoDB object modeling tool for Node.js.</li>
@@ -39,14 +39,14 @@
 
 
 <h1>🔋 Features</h1>
+<p>👉 User Authentication: Users can register and log in with OTP-based authentication.</p>
 <p>👉 Responsive Design: The project is optimized for various screen sizes, ensuring a consistent experience across mobile, tablet, and desktop devices.</p>
-<p>👉 User can Signup</p>
-<p>👉 User can get Login</p>
-<p>👉 Without login can't access cart page </p>
-<p>👉 Supporting Night & Day Mode</p>
+<p>👉 Add to Cart: Users can add products to the cart.</p>
+<p>👉 Secure Access: Only authenticated users can access the cart page. </p>
 
 
 <h1>🤸 Process to Create This Project from Scratch</h1>
+<h3>Frontend:</h3>
 <ul>
   <li>Set up a new React project.</li>
   <li>Install necessary dependencies such as Tailwind CSS and Chakra UI.</li>
@@ -57,21 +57,30 @@
   <li>Deploy the project to a hosting service.</li>
 </ul>
 
+<h3>Backend:</h3>
+<ul>
+  <li>Set up a Node.js project.</li>
+  <li>Configure MongoDB with Mongoose for database management.</li>
+  <li>Set up routes and controllers using Express.</li>
+  <li>Implement functionality using JavaScript to enable shopping features.</li>
+  <li>Implement JWT for secure user authentication.</li>
+  <li>Use Nodemailer to send OTPs for user authentication.</li>
+</ul>
+
+<h3>Deployment:</h3>
+<ul>
+  <li>Deploy the frontend and backend to hosting services.</li>
+</ul>
+
 <h3>GitHub Repo Link</h3>
-https://github.com/kundankrgupta1/eCommerce-Project/
+https://github.com/kundankrgupta1/croma_client
 
 <h1>📷 Screenshots</h1>
 <h3>🏠 Home Page</h3>
-<img src="https://raw.githubusercontent.com/kundankrgupta1/eCommerce-Project/main/src/assets/screenshots/home_page_1.png" alt="project-screenshot" width="1000" height="450/">
+<img src="https://raw.githubusercontent.com/kundankrgupta1/media/main/assets/Screenshot%202024-08-11%20235128.png" alt="project-screenshot" width="1000" height="450/">
 
 <h3>🏠 Home Page 2</h3>
-<img src="https://raw.githubusercontent.com/kundankrgupta1/eCommerce-Project/main/src/assets/screenshots/home_page_2.png" alt="project-screenshot" width="1000" height="450/">
-
-<h3>📃 Category Page</h3>
-<img src="https://raw.githubusercontent.com/kundankrgupta1/eCommerce-Project/main/src/assets/screenshots/category_page_1.png" width="1000" height="450/">
-
-<h3>🌌 Night Mode Desktop</h3>
-<img src="https://raw.githubusercontent.com/kundankrgupta1/eCommerce-Project/main/src/assets/screenshots/desktop_night_mode.png" alt="project-screenshot" width="1000" height="450/">
+<img src="https://raw.githubusercontent.com/kundankrgupta1/media/main/assets/croma%20home2.png" alt="project-screenshot" width="1000" height="450/">
 
 <h3>📱 Responsive Mobile View</h3>
-<img src="https://raw.githubusercontent.com/kundankrgupta1/eCommerce-Project/main/src/assets/screenshots/mobile_home_page.png" alt="project-screenshot" width="400" height="750/">
+<img src="https://raw.githubusercontent.com/kundankrgupta1/media/main/assets/Screenshot%202024-08-11%20235300.png" alt="project-screenshot" width="400" height="750/">
