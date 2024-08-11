@@ -12,7 +12,7 @@ const SingleItem = () => {
 
 	const getSingleItem = async () => {
 		try {
-			const res = await axios.get(`http://localhost:8080/product/${_id}`);
+			const res = await axios.get(`https://croma-server.onrender.com/product/${_id}`);
 			setSingleProduct(res.data.product);
 		} catch (error) {
 			console.log(error);
@@ -32,7 +32,7 @@ const SingleItem = () => {
 	const addToCart = async () => {
 		try {
 			const res = await axios.post(
-				"http://localhost:8080/add-to-cart",
+				"https://croma-server.onrender.com/add-to-cart",
 				{
 					productId: _id,
 					quantity: 1

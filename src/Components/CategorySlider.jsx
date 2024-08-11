@@ -11,7 +11,7 @@ const CategorySlider = () => {
 
 	const getData = async () => {
 		try {
-			const res = await axios.get("http://localhost:8080/category");
+			const res = await axios.get("https://croma-server.onrender.com/category");
 			setData(res.data.categories)
 		} catch (error) {
 			console.log(error)

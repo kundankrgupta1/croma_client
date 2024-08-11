@@ -18,7 +18,7 @@ const Account = ({ onClose }) => {
 		if (stage === "email") {
 			setIsLoading(true);
 			try {
-				await axios.post("http://localhost:8080/auth", { email });
+				await axios.post("https://croma-server.onrender.com/auth", { email });
 				setStage("otp");
 				setError("");
 				setIsLoading(false);
@@ -28,7 +28,7 @@ const Account = ({ onClose }) => {
 			}
 		} else if (stage === "otp") {
 			try {
-				const response = await axios.post("http://localhost:8080/otp", { email, otp });
+				const response = await axios.post("https://croma-server.onrender.com/otp", { email, otp });
 				if (response.data.success) {
 					localStorage.setItem("token", response.data.token);
 					setIsAuth(true);

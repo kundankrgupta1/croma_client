@@ -9,7 +9,7 @@ const ProductPage = () => {
 
 	const getCategoryWiseProduct = async () => {
 		try {
-			const res = await axios.get(`http://localhost:8080/${category}`)
+			const res = await axios.get(`https://croma-server.onrender.com/${category}`)
 			setProducts(res.data.products)
 		} catch (error) {
 			console.log(error)
