@@ -19,12 +19,16 @@ const Personalized = () => {
 		fetchData();
 	}, [])
 	return (
-		<div className="container">
-			<p className="text-xl font-bold mt-16 border-2 rounded-xl p-2 w-fit">Recommendation for You!</p>
-			<div className="flex items-center justify-between p-2 rounded-xl gap-4 flex-wrap border-2">
-				{data && data.map((e, index) => <ProductCard key={index} {...e} />)}
-			</div>
-		</div>
+		<>
+			{data && (
+				<div className="container">
+					<p className="text-xl font-bold mt-16 border-2 rounded-xl p-2 w-fit">Recommendation for You!</p>
+					<div className="flex items-center justify-between p-2 rounded-xl gap-4 flex-wrap border-2">
+						{data && data.map((e, index) => <ProductCard key={index} {...e} />)}
+					</div>
+				</div>
+			)}
+		</>
 	)
 }
 
