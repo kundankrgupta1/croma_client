@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "@chakra-ui/react";
 import { ContextProvider } from "../Context/Context";
+import { SERVER_URL } from "../App";
+import Loading from "./Loading";
 
 const SingleItem = () => {
 	const { _id } = useParams();
@@ -12,8 +14,10 @@ const SingleItem = () => {
 
 	const getSingleItem = async () => {
 		try {
-			const res = await axios.get(`https://croma-server.onrender.com/product/${_id}`);
+			const res = await axios.get(`${SERVER_URL}/product/${_id}`);
 			setSingleProduct(res.data.product);
+			localStorage.setItem("category", res.data.product.category);
+			console.log(res.data.product.category);
 		} catch (error) {
 			console.log(error);
 		}
@@ -68,7 +72,7 @@ const SingleItem = () => {
 	} = singleProduct || {};
 
 	if (!singleProduct) {
-		return <div className="container">Loading...</div>;
+		return <div className="container h-96 w-auto flex justify-center items-center"><Loading text={"Loading..."} /></div>;
 	}
 
 	return (

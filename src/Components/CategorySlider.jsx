@@ -3,18 +3,25 @@ import "react-multi-carousel/lib/styles.css";
 import axios from 'axios';
 import Carousel from "react-multi-carousel";
 import { Link } from "react-router-dom";
+import { SERVER_URL } from "../App";
+import Loading from "./Loading";
 
 
 const CategorySlider = () => {
 
 	const [data, setData] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
 
 	const getData = async () => {
+		setIsLoading(true);
 		try {
-			const res = await axios.get("https://croma-server.onrender.com/category");
+			const res = await axios.get(`${SERVER_URL}/category`);
 			setData(res.data.categories)
+			console.log(res.data.categories)
+			setIsLoading(false);
 		} catch (error) {
 			console.log(error)
+			setIsLoading(false);
 		}
 
 	}
@@ -42,7 +49,8 @@ const CategorySlider = () => {
 	};
 	return (
 		<div className="container py-4">
-			<Carousel
+			{isLoading && <div className="flex items-center justify-center h-48"><Loading text={"Loading..."} /></div>}
+			{!isLoading && <Carousel
 				responsive={responsive}
 				infinite={true}
 			>
@@ -57,7 +65,7 @@ const CategorySlider = () => {
 						)
 					})
 				}
-			</Carousel>
+			</Carousel>}
 		</div>
 	)
 }

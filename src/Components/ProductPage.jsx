@@ -2,17 +2,23 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ProductCard from "./ProductCard"
+import { SERVER_URL } from "../App"
+import Loading from "./Loading"
 
 const ProductPage = () => {
 	const { category } = useParams()
 	const [products, setProducts] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
 
 	const getCategoryWiseProduct = async () => {
+		setIsLoading(true);
 		try {
-			const res = await axios.get(`https://croma-server.onrender.com/${category}`)
+			const res = await axios.get(`${SERVER_URL}/${category}`)
 			setProducts(res.data.products)
+			setIsLoading(false);
 		} catch (error) {
 			console.log(error)
+			setIsLoading(false);
 		}
 	}
 
@@ -23,10 +29,8 @@ const ProductPage = () => {
 	return (
 		<>
 			<div className="container py-8">{category.toUpperCase()}</div>
-
-			<img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1684242615/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/16-05-23/Desktop/Main%20Banner/D_main-banner_hat0zq.png?tr=w-2048" alt="" />
-
-			<div className="container py-8 flex gap-8 flex-wrap items-center">
+			{isLoading && <div className="h-48 flex items-center justify-center"><Loading text="Loading..." /></div>}
+			{!isLoading && <div className="container py-8 flex gap-8 flex-wrap items-center">
 				{
 					products.map((e, index) => {
 						return (
@@ -34,8 +38,7 @@ const ProductPage = () => {
 						)
 					})
 				}
-			</div>
-
+			</div>}
 		</>
 	)
 }

@@ -1,4 +1,6 @@
+import AllProducts from "../Components/AllProducts"
 import CategorySlider from "../Components/CategorySlider"
+import Personalized from "../Components/Personalized"
 import Slider from "../Components/Slider"
 
 const Home = () => {
@@ -15,6 +17,9 @@ const Home = () => {
 						<img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1717075769/Croma%20Assets/CMS/LP%20Page%20Banners/2024/BAU/HP_2Split_MFYMP_Brands_HDFC_ICIC_30May2024_kzbaou.png?tr=w-1024" alt="bank_offer" className="rounded-md" />
 					</div>
 				</div>
+
+				<Personalized />
+				<AllProducts />
 
 				<p className="text-xl font-bold mt-16 mb-4">Exciting Bank Offers For You</p>
 				<div className="flex gap-4">
@@ -48,7 +53,7 @@ const Home = () => {
 				</div>
 
 				<div className="flex items-center gap-8">
-					{}
+					{ }
 				</div>
 
 			</div>

@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { ContextProvider } from "../../Context/Context";
 import Loading from '../Loading';
+import { SERVER_URL } from '../../App';
 const Account = ({ onClose }) => {
 
 	const [email, setEmail] = useState("");
@@ -18,7 +19,7 @@ const Account = ({ onClose }) => {
 		if (stage === "email") {
 			setIsLoading(true);
 			try {
-				await axios.post("https://croma-server.onrender.com/auth", { email });
+				await axios.post(`${SERVER_URL}/auth`, { email });
 				setStage("otp");
 				setError("");
 				setIsLoading(false);
@@ -28,7 +29,7 @@ const Account = ({ onClose }) => {
 			}
 		} else if (stage === "otp") {
 			try {
-				const response = await axios.post("https://croma-server.onrender.com/otp", { email, otp });
+				const response = await axios.post(`${SERVER_URL}/otp`, { email, otp });
 				if (response.data.success) {
 					localStorage.setItem("token", response.data.token);
 					setIsAuth(true);
@@ -79,7 +80,7 @@ const Account = ({ onClose }) => {
 							<input type="checkbox" className="w-6 h-6" /> Keep me signed in
 						</div>
 						<p className="text-xs m-4">By continuing you agree to our <span className='text-teal-600 cursor-pointer'>Terms of Use</span>  & <span className='text-teal-600 cursor-pointer'>Privacy Policy</span> </p>
-						<button type="submit" className="bg-teal-500 w-full h-14 rounded-md">{isLoading ? <><Loading /></> : "Continue"}</button>
+						<button type="submit" className="bg-teal-500 w-full h-14 rounded-md">{isLoading ? <><Loading text={"Sending OTP"} /></> : "Continue"}</button>
 					</>
 				) : (
 					<>
